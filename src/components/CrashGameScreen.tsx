@@ -13,9 +13,10 @@ export const CrashGameScreen: React.FC<CrashGameScreenProps> = ({ onLogout, user
   const [multiplier, setMultiplier] = useState('0.00x');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [activeUsers, setActiveUsers] = useState(1894);
-  const [history, setHistory] = useState(['1.42x', '2.15x', '1.83x', '1.18x', '3.20x', '2.45x', '1.67x']);
+  const [history, setHistory] = useState(['1.23x', '1.45x', '1.18x', '1.67x', '1.34x', '1.52x', '1.29x', '1.81x']);
   const [progressPercent, setProgressPercent] = useState(0);
   const isUpdating = useRef(false);
+  const roundsSinceHigh = useRef(0);
 
   // Active users slight fluctuation
   useEffect(() => {
@@ -25,30 +26,23 @@ export const CrashGameScreen: React.FC<CrashGameScreenProps> = ({ onLogout, user
     return () => clearInterval(interval);
   }, []);
 
-  // Realistic multiplier generator:
-  // - 55% in 1.xx range (واحد وحاجة)
-  // - 30% in 2.xx range (اتنين وحاجة)
-  // - 11% in 3.xx range (تلاتة وحاجة)
-  // - 4% rare higher odd between 4.00x and 6.20x (نادر جدًا)
+  // Multiplier generator:
+  // - All predictions stay strictly in the 1.xx range (1.08x - 1.95x) changing only decimal points
+  // - A 2.xx multiplier is rare and only appears after many consecutive rounds (12+ rounds)
   const generateRealisticMultiplier = (): string => {
-    const rand = Math.random();
-    if (rand < 0.55) {
-      // واحد وحاجة
-      const val = 1.1 + Math.random() * 0.88;
-      return `${val.toFixed(2)}x`;
-    } else if (rand < 0.85) {
-      // اتنين وحاجة
-      const val = 2.05 + Math.random() * 0.9;
-      return `${val.toFixed(2)}x`;
-    } else if (rand < 0.96) {
-      // تلاتة وحاجة
-      const val = 3.05 + Math.random() * 0.85;
-      return `${val.toFixed(2)}x`;
-    } else {
-      // نادر أوي
-      const val = 4.05 + Math.random() * 2.15;
+    roundsSinceHigh.current += 1;
+
+    // Only allow exceeding 1.xx after at least 12-15 rounds with low probability
+    if (roundsSinceHigh.current >= 14 && Math.random() < 0.22) {
+      roundsSinceHigh.current = 0;
+      // 2.حاجة (نادر جداً بعد جولات كتير)
+      const val = 2.05 + Math.random() * 0.4;
       return `${val.toFixed(2)}x`;
     }
+
+    // Default: Strictly in the 1.xx range, changing only decimals
+    const val = 1.08 + Math.random() * 0.88;
+    return `${val.toFixed(2)}x`;
   };
 
   // Smooth roll-up animation of multiplier
