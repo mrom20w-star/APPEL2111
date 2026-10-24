@@ -1,0 +1,6 @@
+{
+  "name": "APPLE HACK | VIP Predictor",
+  "description": "Apple Hack high-tech VIP predictor terminal for Crash game analytics and real-time multiplier signals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

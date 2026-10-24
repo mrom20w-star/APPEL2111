@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #050B24;
+  --color-navy-dark: #03071a;
+  --color-navy-light: #071443;
+  --color-brand-blue: #2F8BFF;
+  --color-brand-cyan: #8CC4FF;
+}
+
+:root {
+  --primary-color: #2f8bff;
+  --primary-color-rgb: 47, 139, 255;
+  --primary-glow: rgba(var(--primary-color-rgb), 0.55);
+}
+
+body {
+  color: #fff;
+  background-color: #040a26;
+  background-image: radial-gradient(90% 55% at 50% 0, #2f8bff47, #0000 70%),
+    radial-gradient(70% 50% at 50% 100%, #00beff2e, #0000 70%),
+    linear-gradient(#071443 0%, #040a26 55%, #020617 100%);
+  background-attachment: fixed;
+  font-family: Cairo, Chakra Petch, sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+[dir="rtl"], [dir="rtl"] *, .font-arabic, .font-arabic * {
+  letter-spacing: normal !important;
+  font-family: Cairo, system-ui, -apple-system, sans-serif !important;
+}
+
+* {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+::-webkit-scrollbar {
+  background: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+.hud-text-glow {
+  text-shadow: 0 0 14px rgba(var(--primary-color-rgb), 0.7);
+}
+
+.vip-gradient-text {
+  background: linear-gradient(to bottom, #9fd2ff, var(--primary-color));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn-cta {
+  color: #04210f;
+  background: linear-gradient(135deg, #2ee88c 0%, #12b866 100%);
+  box-shadow: 0 12px 34px -12px rgba(31, 214, 122, 0.75), inset 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.btn-cta:hover {
+  filter: brightness(1.06);
+}
+
+.glass-card {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: linear-gradient(rgba(47, 139, 255, 0.12), rgba(6, 16, 52, 0.75));
+  border: 1px solid rgba(120, 180, 255, 0.18);
+  box-shadow: 0 20px 60px -30px rgba(47, 139, 255, 0.7);
+}
