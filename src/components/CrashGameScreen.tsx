@@ -125,14 +125,14 @@ export const CrashGameScreen: React.FC<CrashGameScreenProps> = ({ onLogout, user
           <div className="flex items-center gap-2.5">
             <div className="relative h-9 w-9 overflow-hidden rounded-full border border-[rgba(47,139,255,0.6)] shadow-[0_0_15px_rgba(47,139,255,0.5)]">
               <img
-                src={ASSETS.appleHackLogo}
-                alt="APPLE HACK"
+                src={ASSETS.crashLogo}
+                alt="كراش"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="text-right">
-              <h1 className="text-[16px] font-black leading-tight text-white flex items-center gap-1.5">
-                <span>APPLE HACK</span>
+              <h1 className="text-[17px] font-black leading-tight text-white flex items-center gap-1.5">
+                <span>كراش</span>
                 <span className="h-1.5 w-1.5 rounded-full bg-[#1fd67a] animate-ping" />
               </h1>
               <p className="text-[8px] font-black uppercase tracking-[0.22em] text-[#8CC4FF]">
@@ -289,7 +289,7 @@ export const CrashGameScreen: React.FC<CrashGameScreenProps> = ({ onLogout, user
               </div>
               <div>
                 <p className="text-[12px] font-black text-white flex items-center gap-1.5">
-                  <span>خوارزمية APPLE HACK نشطة</span>
+                  <span>خوارزمية كراش نشطة</span>
                 </p>
                 <p className="text-[9.5px] text-white/50">
                   {isAnalyzing

@@ -93,8 +93,8 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete, language
             <div className="pointer-events-none absolute inset-0 rounded-full bg-[rgba(47,139,255,0.35)] blur-[50px]" />
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-[rgba(47,139,255,0.5)] shadow-[0_0_80px_-15px_rgba(47,139,255,0.95)]">
               <img
-                src={ASSETS.appleHackLogo}
-                alt="APPLE HACK"
+                src={ASSETS.crashLogo}
+                alt="كراش"
                 className="h-full w-full object-cover"
               />
               <motion.div

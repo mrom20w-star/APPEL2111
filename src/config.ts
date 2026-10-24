@@ -1,5 +1,6 @@
 export const ASSETS = {
-  appleHackLogo: '/assets/apple-hack-logo.jpg',
+  crashLogo: '/assets/crash-logo.jpg',
+  appleHackLogo: '/assets/crash-logo.jpg',
   eagleLogo: '/assets/eagle-logo-CH_KbwXT.png',
   logoCrash: '/assets/logo-crash-DjCA49Xt.png',
   gameCrashEmblem: '/assets/game-crash-emblem-BoOLeHMv.png',

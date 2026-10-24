@@ -96,8 +96,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
             <div className="absolute inset-0 rounded-full bg-[rgba(47,139,255,0.4)] blur-2xl" />
             <div className="relative flex h-24 w-24 sm:h-28 sm:w-28 items-center justify-center overflow-hidden rounded-full border-2 border-[rgba(47,139,255,0.6)] shadow-[0_0_50px_-8px_rgba(47,139,255,0.95)]">
               <img
-                src={ASSETS.appleHackLogo}
-                alt="APPLE HACK"
+                src={ASSETS.crashLogo}
+                alt="كراش"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -112,12 +112,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
           <div className="mt-5 flex items-center gap-2 rounded-full border border-[rgba(47,139,255,0.3)] bg-[rgba(47,139,255,0.08)] px-4 py-1.5 shadow-[0_0_20px_rgba(47,139,255,0.15)]">
             <Sparkles className="h-3.5 w-3.5 text-[#2F8BFF]" />
             <span className="text-[10px] font-black uppercase tracking-[0.35em] text-[#8CC4FF]">
-              APPLE HACK · VIP TERMINAL
+              كراش · VIP TERMINAL
             </span>
           </div>
 
           <h1 className="mt-4 text-[34px] font-black leading-tight tracking-tight">
-            تسجيل <span className="text-[#2F8BFF] drop-shadow-[0_0_20px_rgba(47,139,255,0.7)]">الدخول</span>
+            سكريبت <span className="text-[#2F8BFF] drop-shadow-[0_0_20px_rgba(47,139,255,0.7)]">كراش</span>
           </h1>
 
           <p className="mt-2 text-[12.5px] leading-relaxed text-white/50 max-w-[300px]">
@@ -218,7 +218,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
               disabled={isAuthenticating}
               className="mt-2 group flex h-14 w-full items-center justify-center gap-2.5 rounded-2xl btn-cta text-[14px] font-black uppercase tracking-wider transition-all duration-200 active:scale-[0.98] shadow-lg cursor-pointer disabled:opacity-60"
             >
-              <span>تسجيل الدخول إلى السكريبت</span>
+              <span>تسجيل الدخول إلى سكريبت كراش</span>
               <ArrowRight className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-1" />
             </button>
           </div>
@@ -251,8 +251,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLogin }) => {
               <div className="relative mx-auto flex h-24 w-24 items-center justify-center">
                 <div className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-[rgba(47,139,255,0.5)] bg-[#050B24] shadow-[0_0_40px_-5px_rgba(47,139,255,0.85)]">
                   <img
-                    src={ASSETS.appleHackLogo}
-                    alt="APPLE HACK"
+                    src={ASSETS.crashLogo}
+                    alt="كراش"
                     className="h-full w-full object-cover"
                   />
                   <motion.div
